@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .gaming-button{
+        background-color: rgb(230, 230, 230);
+        color: black;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+      .is-toggled{
+        background-color: black;
+        color: white;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <button onclick="
+      gaming();
+      " class="js-gaming-button gaming-button">Gaming</button>
+  </body>
+  <script>
+    function gaming() {
+      const buttonElement = document.querySelector('.js-gaming-button');
+
+       (buttonElement.innerText === 'Gaming')
+        buttonElement.innerHTML = 'Gaming'
+        buttonElement.classList.toggle('is-toggled');
+    }
+  </script>
+</html>
